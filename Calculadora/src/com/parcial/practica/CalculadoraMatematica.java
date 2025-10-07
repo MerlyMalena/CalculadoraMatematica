@@ -29,32 +29,35 @@ public class CalculadoraMatematica {
         
     }
    
-    public void opSuma(){ // Método para sumar ambos números. Recibe los parámetros num1 y num2
-       resultado=num1+num2;
-        System.out.println("El resultado de la suma es: "+resultado);
+    public double opSuma(){ // Método para sumar ambos números. Recibe los parámetros num1 y num2 y retorna resultado.
+       return num1+num2;   
     }
+    
    
-    public void opResta(){ // Método para restar ambos números. Recibe los parámetros num1 y num2
-        resultado=num1-num2;
-        System.out.println("El resultado de la resta es: "+resultado);
+    public double opResta(){ // Método para restar ambos números. Recibe los parámetros num1 y num2  y retorna resultado.
+       return num1-num2;
+       
     }
     
-    public void opMult(){ // Método para multiplicar ambos números. Recibe los parámetros num1 y num2
-        resultado=num1*num2;
-        System.out.println("El resultado de la multiplicación es: "+resultado);
+    public double opMult(){ // Método para multiplicar ambos números. Recibe los parámetros num1 y num2  y retorna resultado.
+        return num1*num2;
+        
     }
     
-    public void opDiv(){ // Método para dividir ambos números. Recibe los parámetros num1 y num2
+    public double opDiv(){ // Método para dividir ambos números. Recibe los parámetros num1 y num2  y retorna resultado.
         if (num2==0){ // Validar que el segundo número no sea 0
             System.out.println("No se puede dividir entre 0"); 
         }
         else {
-            resultado= num1/num2;
-            System.out.println("El resultado de la división es: "+resultado);
+            return num1/num2;
+            
         }
+        
+        return 0;
         
     
     }
+
    
     // ----------------------  Main ------------------------------
    
@@ -86,16 +89,17 @@ public class CalculadoraMatematica {
                       break;
                       
                      case 2:
-                         calculadora.opSuma(); // Llamar el método para sumar.
+                         System.out.println("El resultado de la suma es: "+ calculadora.opSuma());
+                         // Llamar el método para sumar.
                          break;
                      case 3: 
-                         calculadora.opResta(); // Llamar el método para restar.
+                          System.out.println("El resultado de la resta es: "+ calculadora.opResta()); // Llamar el método para restar.
                          break;
                      case 4: 
-                         calculadora.opMult(); // Llamar el método para multiplicar.
+                          System.out.println("El resultado de la multiplicacion es: "+ calculadora.opMult());// Llamar el método para multiplicar.
                          break;
                      case 5:
-                         calculadora.opDiv(); // Llamar el método para dividir.
+                         System.out.println("El resultado de la division es: "+ calculadora.opDiv()); // Llamar el método para dividir.
                          break;
                      }
                  
